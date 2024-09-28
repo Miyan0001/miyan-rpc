@@ -18,7 +18,7 @@ client.on('ready', async () => {
     .setDetails('Ruan Mei')
     .setStartTimestamp(Date.now())
     .setAssetsLargeImage(getExtendURL[0].external_asset_path) // https://assets.ppy.sh/beatmaps/1550633/covers/list.jpg
-    // .setAssetsLargeText('Idle')
+    // .setAssetsLargeText('Online')
     // .setAssetsSmallImage('373370493127884800') // https://discord.com/api/v9/oauth2/applications/367827983903490050/assets
     // .setAssetsSmallText('click the circles')
     // .setPlatform('desktop')
