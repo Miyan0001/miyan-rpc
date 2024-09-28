@@ -22,7 +22,7 @@ client.on('ready', async () => {
     // .setAssetsSmallText('click the circles')
     // .setPlatform('desktop')
      .addButton('Youtube', 'https://m.youtube.com/@Miyan0001');
-  client.user.setPresence({activities: [status]}, {status: 'invisible'});
+  client.user.setPresence({activities: [status]}, {status: 'dnd'});
 });
 
 client.login(process.env.TOKEN);
