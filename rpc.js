@@ -23,7 +23,9 @@ client.on('ready', async () => {
     // .setAssetsSmallText('click the circles')
     // .setPlatform('desktop')
     .addButton('YOUTUBE', 'https://m.youtube.com/@Miyan0001');
-  client.user.setPresence({activities: [status], status: 'online'});
+    client.user.setActivity(status);
+  client.user.setPresence({ status: "online" });
+  //client.user.setPresence({activities: [status], status: 'online'});
 });
 
 client.login(process.env.TOKEN);
