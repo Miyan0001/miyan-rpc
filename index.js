@@ -1,6 +1,6 @@
 const { Client, RichPresence } = require('discord.js-selfbot-v13');
 const client = new Client();
-const { spawn } = require("child_process")
+const { exec, spawn } = require("child_process")
 const express = require('express');
 const app = express();
 
