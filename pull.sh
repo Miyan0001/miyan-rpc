@@ -1,2 +1,2 @@
 #!/bin/bash
-git reset --head HEAD && git pull
+git reset --hard HEAD && git pull
