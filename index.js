@@ -15,6 +15,7 @@ client.on('ready', async () => {
     .setState('She Is Mine.')
     .setName('Someone Who Will Be Mine.')
     .setDetails('Ruan Mei')
+    .setStatus('INVISIBLE')
     .setStartTimestamp(Date.now())
     .setAssetsLargeImage(getExtendURL[0].external_asset_path) // https://assets.ppy.sh/beatmaps/1550633/covers/list.jpg
     // .setAssetsLargeText('Idle')
@@ -22,7 +23,7 @@ client.on('ready', async () => {
     // .setAssetsSmallText('click the circles')
     // .setPlatform('desktop')
      .addButton('Youtube', 'https://m.youtube.com/@Miyan0001');
-  client.user.setPresence({ activities: [status], status: 'dnd' });
+  client.user.setPresence({ activities: [status] });
 });
 
 client.login(process.env.TOKEN);
