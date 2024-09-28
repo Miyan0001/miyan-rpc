@@ -1,7 +1,38 @@
 const { Client, RichPresence } = require('discord.js-selfbot-v13');
 const client = new Client();
+const { spawn } = require("child_process")
+const express = require('express');
+const app = express();
+
+async function handleGit() {
+await exec("git reset --hard HEAD && git pull")
+const child = spawn(process.argv[0], process.argv.slice(1), {
+    detached: true,
+    stdio: 'inherit'
+  });
+  child.unref();
+  process.exit();
+}
+
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+
+app.get('/push', async (req, res) => {
+  res.send('Success Pulling');
+  await handleGit();
+});
+
+app.use((req, res) => {
+  res.status(404).send('Not Found');
+});
+
+app.listen(5000, () => {
+  console.log('Server running on port 5000');
+});
 
 client.on('ready', async () => {
+  console.clear()
   console.log(`${client.user.username} is ready!`);
   const getExtendURL = await RichPresence.getExternal(
     client,
@@ -22,7 +53,7 @@ client.on('ready', async () => {
     // .setAssetsSmallText('click the circles')
     // .setPlatform('desktop')
      .addButton('Youtube', 'https://m.youtube.com/@Miyan0001');
-  client.user.setPresence({activities: [status], status: 'invisible'});
+  client.user.setPresence({activities: [status], status: 'online'});
 });
 
 client.login(process.env.TOKEN);

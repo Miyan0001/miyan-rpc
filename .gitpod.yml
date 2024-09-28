@@ -1,4 +1,10 @@
+ports:
+    - name: miyan-web
+      port: 5000
+      visibility: public
+      onOpen: ignore
+
 tasks:
   - name: miyan-rpc
-    init: npm install dotenv discord.js-selfbot-v13@latest
+    init: npm install dotenv express discord.js-selfbot-v13@latest
     command: node index.js
