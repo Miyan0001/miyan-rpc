@@ -26,5 +26,4 @@ app.get('/push', (req, res) => {
 
 app.listen(5000, () => {
   console.clear();
-  console.log('Server running on port 5000');
 });
