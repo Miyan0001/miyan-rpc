@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-app.get('/push', async (req, res) => {
-  res.send('Success Pulling');
+app.get('/push', (req, res) => {
+  res.status(200).send('Success Pulling');
   handleGit();
 });
 
