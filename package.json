@@ -9,8 +9,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "dotenv",
-    "express",
-    "discord.js-selfbot-v13"
+    "dotenv": "latest",
+    "express": "latest",
+    "discord.js-selfbot-v13": "latest"
   }
 }

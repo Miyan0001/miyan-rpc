@@ -6,5 +6,5 @@ ports:
 
 tasks:
   - name: miyan-rpc
-    init: npm install dotenv express discord.js-selfbot-v13@latest
-    command: node index.js
+    init: npm i
+    command: npm start
