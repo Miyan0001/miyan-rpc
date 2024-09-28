@@ -1,0 +1,4 @@
+tasks:
+  - name: miyan-rpc
+    init: npm install dotenv discord.js-selfbot-v13@latest
+    command: node index.js
