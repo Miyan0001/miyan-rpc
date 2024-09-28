@@ -22,7 +22,7 @@ client.on('ready', async () => {
     // .setAssetsSmallImage('373370493127884800') // https://discord.com/api/v9/oauth2/applications/367827983903490050/assets
     // .setAssetsSmallText('click the circles')
     // .setPlatform('desktop')
-     .addButton('Youtube', 'https://m.youtube.com/@Miyan0001');
+    // .addButton('Youtube', 'https://m.youtube.com/@Miyan0001');
   client.user.setPresence({activities: [status], status: 'online'});
 });
 
