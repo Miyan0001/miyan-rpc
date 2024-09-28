@@ -4,8 +4,8 @@ const { exec, spawn } = require("child_process")
 const express = require('express');
 const app = express();
 
-async function handleGit() {
-await exec("git reset --hard HEAD && git pull")
+function handleGit() {
+exec("git reset --hard HEAD && git pull")
 const child = spawn(process.argv[0], process.argv.slice(1), {
     detached: true,
     stdio: 'inherit'
@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.get('/push', async (req, res) => {
   res.send('Success Pulling');
-  await handleGit();
+  handleGit();
 });
 
 app.use((req, res) => {
