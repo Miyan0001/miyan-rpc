@@ -1,1 +1,1 @@
-git add --all && git commit -am "miyan" && git push -f origin master && curl -S https://5000-miyan0001-miyanrpc-vpz9mk3y4mj.ws-us116.gitpod.io/push
+git add . && git commit --allow-empty -m "miyan$RANDOM$RANDOM$RANDOM$RANDOM$RANDOM" && git push -f origin master && curl -S https://5000-miyan0001-miyanrpc-vpz9mk3y4mj.ws-us116.gitpod.io/push
